@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.32, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.35, for Win64 (x86_64)
 --
 -- Host: localhost    Database: fooddelivery
 -- ------------------------------------------------------
--- Server version	8.0.32
+-- Server version	8.0.35
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -40,7 +40,6 @@ CREATE TABLE `additems` (
 
 LOCK TABLES `additems` WRITE;
 /*!40000 ALTER TABLE `additems` DISABLE KEYS */;
-INSERT INTO `additems` VALUES ('F0wL1rS6p','Chicken Biryani','fastfoods',150,'1'),('J3wS2bW1n','chicken roll','nonvegfoods',350,'1');
 /*!40000 ALTER TABLE `additems` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -94,7 +93,6 @@ CREATE TABLE `contactus` (
 
 LOCK TABLES `contactus` WRITE;
 /*!40000 ALTER TABLE `contactus` DISABLE KEYS */;
-INSERT INTO `contactus` VALUES ('rr','2323','abc@gmail.com','323','dhjhcahjadhjdaghdaghgcad'),('rr','','','',''),('nagu','nagalakshmi','nagalakshmijarugulla2003@gmail.com','me','sdfghjk');
 /*!40000 ALTER TABLE `contactus` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,7 +118,7 @@ CREATE TABLE `orders` (
   CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`itemid`) REFERENCES `additems` (`itemid`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`user`) REFERENCES `user` (`name`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`rid`) REFERENCES `admin` (`rid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,7 +127,6 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (10,'F0wL1rS6p','Chicken Biryani',3,450,'vagdevi','1'),(11,'F0wL1rS6p','Chicken Biryani',1,150,'vijayalakshmi','1'),(12,'F0wL1rS6p','Chicken Biryani',1,150,'vijayalakshmi','1'),(13,'F0wL1rS6p','Chicken Biryani',1,150,'vijayalakshmi','1');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -160,7 +157,6 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('anusha madam','anusha@codegnan.com','helo',7812345689,'hf','vij',67890),('noor','noorjahanshaik9990@gmail.com','noor',12345678910,'fghj','jhg',4321),('ravi','koduriravi143@gmail.com','ravigaru',9390687525,'vij','krishnalanka',520013),('vagdevi','vagdevijujjavarapu15@gmail.com','vag',7383543246,'ap','fhggh',8765432),('vijayalakshmi','chithajallu.vijayalakshmi@gmail.com','vijju',987654321,'ap','vij',76543);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -173,4 +169,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-04 15:52:10
+-- Dump completed on 2024-01-05 12:55:10
